@@ -14,9 +14,12 @@ public class SampleServlet extends HttpServlet {
 	 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-         
         PrintWriter out = resp.getWriter();
-        out.print("Hello World from Servlet");
+        out.println("<html>\n"+"<body bgcolor=\"#f0f0f0\">\n"+
+         "<h1 align=\"center\" bgcolor=\"#5F9EA0\">" + "Adapt Next <br> Version 1.0 "+"</h1>\n"+
+        		"</body></html>" 		
+        		);
+        
         out.flush();
         out.close();
     }
