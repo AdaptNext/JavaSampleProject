@@ -16,7 +16,8 @@ public class SampleServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
         out.println("<html>\n"+"<body bgcolor=\"#f0f0f0\">\n"+
-         "<h1 align=\"center\" bgcolor=\"#5F9EA0\">" + "Adapt Next <br> Version 1.0 "+"</h1>\n"+
+        "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>" +
+         "<h1 style=\"text-align:center\" bgcolor=\"#5F9EA0\">" + "Adapt Next <br> Version 1.0 "+"</h1>\n"+
         		"</body></html>" 		
         		);
         
