@@ -17,6 +17,7 @@
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
+		<finalName>${project.name}</finalName>
     	<!-- <testSourceDirectory>test</testSourceDirectory> -->
         <plugins>
         	<!--  To compile Java code in src folder -->
