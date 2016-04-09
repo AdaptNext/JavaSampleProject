@@ -12,28 +12,29 @@
     	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   	</properties>
   	
-  	<distributionManagement>
+  	
+  	<!--distributionManagement>
   		<repository>
       		<id>nexus-releases</id>
-      		<!--url>http://localhost:8080/nexus/content/repositories/releases</url>
-      		<url>http://ec2-52-86-204-91.compute-1.amazonaws.com:8085/nexus/content/repositories/poc-nexus-release/</url -->
+      		<url>http://localhost:8080/nexus/content/repositories/releases</url>
+      		<url>http://ec2-52-86-204-91.compute-1.amazonaws.com:8085/nexus/content/repositories/poc-nexus-release/</url>
 			<url>http://ec2-52-86-204-91.compute-1.amazonaws.com:8085/nexus/content/repositories/releases</url>
     	</repository>
     	<snapshotRepository>
     		<id>nexus-snapshots</id>
-    		<!--url>http://localhost:8081/nexus/content/repositories/snapshots</url>
-    		<url>http://ec2-52-86-204-91.compute-1.amazonaws.com:8085/nexus/content/repositories/poc-nexus-snapshot/</url --> 
+    		<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+    		<url>http://ec2-52-86-204-91.compute-1.amazonaws.com:8085/nexus/content/repositories/poc-nexus-snapshot/</url> 
 			<url>http://ec2-52-86-204-91.compute-1.amazonaws.com:8085/nexus/content/repositories/snapshots</url>
     	</snapshotRepository>
   	</distributionManagement>
   	
 	<scm>
-        <connection>scm:git:https://github.com/AdaptNext/JavaSampleProject.git</connection>
-        <url>https://github.com/AdaptNext/JavaSampleProject.git</url>
-        <developerConnection>scm:git:https://github.com/AdaptNext/JavaSampleProject.git</developerConnection>
-        <tag>v1.5</tag>
-    </scm>
-	
+        	<connection>scm:git:https://github.com/AdaptNext/JavaSampleProject.git</connection>
+        	<url>https://github.com/AdaptNext/JavaSampleProject.git</url>
+        	<developerConnection>scm:git:https://github.com/AdaptNext/JavaSampleProject.git</developerConnection>
+        	<tag>v1.5</tag>
+    	</scm>
+	-->
 	<build>
 		<finalName>JavaSampleProject</finalName>
 		<sourceDirectory>src</sourceDirectory>
