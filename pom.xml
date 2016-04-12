@@ -57,47 +57,41 @@
                     </configuration>
                 </plugin>
 				
-				<!--
-						Maven Deploy plugin is mainly used in deploy stage to upload artifacts, pom & other files to repository manager.
-						The deploy plugin has 2 goals:
-								1) deploy:deploy is used to automatically install the artifact, its pom and the attached artifacts produced by a particular project. Most if not all of the information related to the deployment is stored in the project's pom.
-								2) deploy:deploy-file is used to install a single artifact along with its pom. In that case the artifact information can be taken from an optionally specified pomFile, but can be completed/overriden using the command line.
+		<!--
+			Maven Deploy plugin is mainly used in deploy stage to upload artifacts, pom & other files to repository manager.
+			The deploy plugin has 2 goals:
+				1) deploy:deploy is used to automatically install the artifact, its pom and the attached artifacts produced by a particular project. Most if not all of the information related to the deployment is stored in the project's pom.
+				2) deploy:deploy-file is used to install a single artifact along with its pom. In that case the artifact information can be taken from an optionally specified pomFile, but can be completed/overriden using the command line.
 							
-				-->
+		-->
 				
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<configuration>
-						<skip>false</skip>
-					</configuration>
-				</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-deploy-plugin</artifactId>
+			<configuration>
+				<skip>false</skip>
+			</configuration>
+		</plugin>
 								
-				<!--
-					This plugin is used to release a project with Maven, saving a lot of repetitive, manual work. Releasing a project is made in two steps: prepare and perform.
-					Goals:
-						release:clean Clean up after a release preparation.
-						release:prepare Prepare for a release in SCM.
-						release:prepare-with-pom Prepare for a release in SCM, and generate release POMs that record the fully resolved projects used.
-						release:rollback Rollback a previous release.
-						release:perform Perform a release from SCM.
-						release:stage Perform a release from SCM into a staging folder/repository.
-						release:branch Create a branch of the current project with all versions updated.
-						release:update-versions Update the versions in the POM(s).
-				-->	
+		<!--
+			This plugin is used to release a project with Maven, saving a lot of repetitive, manual work. Releasing a project is made in two steps: prepare and perform.
+			Goals:
+			release:clean Clean up after a release preparation.
+			release:prepare Prepare for a release in SCM.
+			release:prepare-with-pom Prepare for a release in SCM, and generate release POMs that record the fully resolved projects used.
+			release:rollback Rollback a previous release.
+			release:perform Perform a release from SCM.
+			release:stage Perform a release from SCM into a staging folder/repository.
+			release:branch Create a branch of the current project with all versions updated.
+			release:update-versions Update the versions in the POM(s).
+		-->	
 				
                 <plugin>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.1</version>
-                    <configuration>
-                        <tagNameFormat>v@{project.version}</tagNameFormat>
-                        <autoVersionSubmodules>true</autoVersionSubmodules>
-                        <!-- do not release profile from Maven super pom -->
-                        <useReleaseProfile>false</useReleaseProfile>
-                        <!--  instead use our own one called release, see below -->
-                        <releaseProfiles>release</releaseProfiles>
-                    </configuration>
-                </plugin>
+   			<groupId>org.apache.maven.plugins</groupId>
+   			<artifactId>maven-release-plugin</artifactId>
+   			<version>2.2.2</version>
+		</plugin>
+                
                 <plugin>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>2.10.1</version>
